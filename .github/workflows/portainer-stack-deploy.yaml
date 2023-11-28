@@ -1,9 +1,14 @@
 name: Deploy
 
 on:
+  pull_request:
   push:
     branches:
-      - master
+      - development
+
+env:
+  ENV: dev
+  NODE_ENV: dev
 
 jobs:
   deploy:
